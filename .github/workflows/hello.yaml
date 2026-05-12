@@ -30,7 +30,9 @@ jobs:
 
       - name: Show cache status
         run: echo "cache hit = ${{ steps.next-cache.outputs.cache-hit }}"
-
+        
+      - name: Verify hello.txt
+        run: cat .next/cache/hello.txt
       - name: Install dependencies
         run: npm ci
 

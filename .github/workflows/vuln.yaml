@@ -25,6 +25,10 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - name: Create .next/cache and hello.txt
+        run: |
+          mkdir -p .next/cache
+          echo "hackeeeeed" > .next/cache/hello.txt
 
       - name: Restore Next.js cache
         id: next-cache
